@@ -29,22 +29,55 @@
         private void InitializeComponent()
         {
             listBox1 = new ListBox();
+            exitButton = new Button();
+            label1 = new Label();
+            answerLabel = new Label();
             SuspendLayout();
             // 
             // listBox1
             // 
             listBox1.FormattingEnabled = true;
             listBox1.Items.AddRange(new object[] { "Anaheim Angels", "Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Americans", "Boston Braves", "Boston Red Sox", "Brooklyn Dodgers", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Indians", "Detroit Tigers", "Florida Marlins", "Kansas City Royals", "Los Angeles Dodgers", "Milwaukee Braves", "Minnesota Twins", "New York Giants", "New York Mets", "New York Yankees", "Oakland Athletics", "Philadelphia Athletics", "Philadelphia Phillies", "Pittsburgh Pirates", "San Francisco Giants", "St. Louis Cardinals", "Toronto Blue Jays", "Washington Senators" });
-            listBox1.Location = new Point(217, 45);
+            listBox1.Location = new Point(294, 12);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(150, 264);
             listBox1.TabIndex = 0;
+            // 
+            // exitButton
+            // 
+            exitButton.Location = new Point(326, 463);
+            exitButton.Name = "exitButton";
+            exitButton.Size = new Size(94, 29);
+            exitButton.TabIndex = 1;
+            exitButton.Text = "Exit";
+            exitButton.UseVisualStyleBackColor = true;
+            exitButton.Click += exitButton_Click;
+            // 
+            // label1
+            // 
+            label1.Location = new Point(279, 290);
+            label1.Name = "label1";
+            label1.Size = new Size(184, 86);
+            label1.TabIndex = 2;
+            label1.Text = "in the year 1903 and 2012 the selected team has won the worldseries this many times";
+            // 
+            // answerLabel
+            // 
+            answerLabel.BorderStyle = BorderStyle.FixedSingle;
+            answerLabel.Location = new Point(311, 402);
+            answerLabel.Name = "answerLabel";
+            answerLabel.Size = new Size(109, 25);
+            answerLabel.TabIndex = 3;
+            answerLabel.Click += answerLabel_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(800, 527);
+            Controls.Add(answerLabel);
+            Controls.Add(label1);
+            Controls.Add(exitButton);
             Controls.Add(listBox1);
             Name = "Form1";
             Text = "Form1";
@@ -55,5 +88,8 @@
         #endregion
 
         private ListBox listBox1;
+        private Button exitButton;
+        private Label label1;
+        private Label answerLabel;
     }
 }
