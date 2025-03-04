@@ -28,20 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
+            TeamsListBox = new ListBox();
             exitButton = new Button();
             label1 = new Label();
             answerLabel = new Label();
             SuspendLayout();
             // 
-            // listBox1
+            // TeamsListBox
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.Items.AddRange(new object[] { "Anaheim Angels", "Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Americans", "Boston Braves", "Boston Red Sox", "Brooklyn Dodgers", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Indians", "Detroit Tigers", "Florida Marlins", "Kansas City Royals", "Los Angeles Dodgers", "Milwaukee Braves", "Minnesota Twins", "New York Giants", "New York Mets", "New York Yankees", "Oakland Athletics", "Philadelphia Athletics", "Philadelphia Phillies", "Pittsburgh Pirates", "San Francisco Giants", "St. Louis Cardinals", "Toronto Blue Jays", "Washington Senators" });
-            listBox1.Location = new Point(294, 12);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(150, 264);
-            listBox1.TabIndex = 0;
+            TeamsListBox.FormattingEnabled = true;
+            TeamsListBox.Items.AddRange(new object[] { "Anaheim Angels", "Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Americans", "Boston Braves", "Boston Red Sox", "Brooklyn Dodgers", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Indians", "Detroit Tigers", "Florida Marlins", "Kansas City Royals", "Los Angeles Dodgers", "Milwaukee Braves", "Minnesota Twins", "New York Giants", "New York Mets", "New York Yankees", "Oakland Athletics", "Philadelphia Athletics", "Philadelphia Phillies", "Pittsburgh Pirates", "San Francisco Giants", "St. Louis Cardinals", "Toronto Blue Jays", "Washington Senators" });
+            TeamsListBox.Location = new Point(294, 12);
+            TeamsListBox.Name = "TeamsListBox";
+            TeamsListBox.Size = new Size(150, 264);
+            TeamsListBox.TabIndex = 0;
+            TeamsListBox.SelectedIndexChanged += TeamsListBox_SelectedIndexChanged;
             // 
             // exitButton
             // 
@@ -68,7 +69,6 @@
             answerLabel.Name = "answerLabel";
             answerLabel.Size = new Size(109, 25);
             answerLabel.TabIndex = 3;
-            answerLabel.Click += answerLabel_Click;
             // 
             // Form1
             // 
@@ -78,7 +78,7 @@
             Controls.Add(answerLabel);
             Controls.Add(label1);
             Controls.Add(exitButton);
-            Controls.Add(listBox1);
+            Controls.Add(TeamsListBox);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
@@ -87,7 +87,7 @@
 
         #endregion
 
-        private ListBox listBox1;
+        private ListBox TeamsListBox;
         private Button exitButton;
         private Label label1;
         private Label answerLabel;

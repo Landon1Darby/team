@@ -15,7 +15,6 @@ namespace team
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // VV Read team names from teams.txt VV
             StreamReader streamReader = new StreamReader("Teams.txt");
 
             while (!streamReader.EndOfStream)
@@ -24,15 +23,19 @@ namespace team
                 teams.Add(line);
             }
             streamReader.Close();
-            // ^^ Read team names from teams.txt ^^
 
+            for(int i = 0; i < teams.Count; i++)
+            {
+                wins.Add(0);
+            }
+
+            calculateWins();
         }
-        
+
         private void calculateWins()
         {
-            wins.Capacity = teams.Count;
             StreamReader streamReader = new StreamReader("WorldSeriesWinners.txt");
-            while (!streamReader.EndOfStream) 
+            while (!streamReader.EndOfStream)
             {
                 string line = streamReader.ReadLine();
                 for (int i = 0; i < teams.Count; i++)
@@ -52,11 +55,9 @@ namespace team
             this.Close();
         }
 
-        
-
-        private void answerLabel_Click(object sender, EventArgs e)
+        private void TeamsListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            answerLabel.Text = wins[TeamsListBox.SelectedIndex].ToString();
         }
     }
 }
