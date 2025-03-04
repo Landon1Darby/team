@@ -35,7 +35,7 @@
             // 
             listBox1.FormattingEnabled = true;
             listBox1.Items.AddRange(new object[] { "Anaheim Angels", "Arizona Diamondbacks", "Atlanta Braves", "Baltimore Orioles", "Boston Americans", "Boston Braves", "Boston Red Sox", "Brooklyn Dodgers", "Chicago Cubs", "Chicago White Sox", "Cincinnati Reds", "Cleveland Indians", "Detroit Tigers", "Florida Marlins", "Kansas City Royals", "Los Angeles Dodgers", "Milwaukee Braves", "Minnesota Twins", "New York Giants", "New York Mets", "New York Yankees", "Oakland Athletics", "Philadelphia Athletics", "Philadelphia Phillies", "Pittsburgh Pirates", "San Francisco Giants", "St. Louis Cardinals", "Toronto Blue Jays", "Washington Senators" });
-            listBox1.Location = new Point(296, 50);
+            listBox1.Location = new Point(217, 45);
             listBox1.Name = "listBox1";
             listBox1.Size = new Size(150, 264);
             listBox1.TabIndex = 0;
@@ -48,6 +48,7 @@
             Controls.Add(listBox1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
         }
 
